@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Pay Fees</title>
+  <link rel="stylesheet" href="../css/pagesat.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+<section class="header">
+  <nav>
+    <a href="index.html"><img src="../img/logo-removebg-preview.png" id="logo-img" alt="Logo" /></a>
+    <div class="nav-links" id="navLinks">
+      <span class="icon" onclick="hidemenu()">&#10005;</span>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Admission_page.html">Admission</a></li>
+        <li><a href="index.html#ofertat">Ofertat</a></li>
+        <li><a href="produktet.html">Produktet</a></li>
+        <li><a href="pagesat.html">Pagesat</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+    <span class="icon" onclick="showmenu()">&#9776;</span>
+  </nav>
+
+  <div class="wrapper">
+    <div class="r_form_wrap">
+      <div class="title"><p id="header_fees">Pagesat Online për Barnat</p></div>
+
+      <div class="r_form">
+        <div class="input_wrap">
+          <label for="medication">Barnat</label>
+          <div class="input_item">
+            <i class="fa fa-capsules" id="icon"></i>
+            <select id="medication" class="input" required>
+              <option value="select">Zgjidhni një barnë</option>
+              <option value="paracetamol">Paracetamol</option>
+              <option value="ibuprofen">Ibuprofen</option>
+              <option value="amoxicillin">Amoxicillin</option>
+              <option value="aspirina">Aspirina</option>
+              <option value="krem">Krem Hidratues</option>
+              <option value="tensiometer">TensioMeter</option>
+              <option value="vitamina_c">Vitamina C</option>
+              <option value="diazepan">Diazepan</option>
+              <option value="neuroton">Neuroton</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input_wrap">
+          <label for="quantity">Sasia</label>
+          <div class="input_item">
+            <i class="fa fa-capsules" id="icon"></i>
+            <input type="number" id="quantity" class="input" placeholder="Shkruani sasinë" min="1" required />
+          </div>
+        </div>
+
+        <div class="input_wrap">
+          <label for="total_amount">Shuma totale</label>
+          <div class="input_item">
+            <i class="fa fa-credit-card" id="icon"></i>
+            <p id="total_amount" class="input">Përllogaritja do të shfaqet këtu</p>
+          </div>
+        </div>
+
+        <div class="input_wrap">
+          <label for="payment_method">Mënyra e Pagesës</label>
+          <div class="input_item">
+            <select id="payment_method" class="input" required>
+              <option value="select">Zgjidhni një mundësi pagese</option>
+              <option value="credit_card">Kartë Krediti</option>
+              <option value="paypal">PayPal</option>
+              <option value="cash_on_delivery">Cash on Delivery</option>
+            </select>
+          </div>
+        </div>
+
+        <input type="button" class="button" value="Shiko Shumat dhe Paguaj" onclick="calculateTotal(); sendmail();" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="none_div"></div>
+
+<script src="../js/pagesat.js"></script>
+<script src="../js/nav.js"></script>
+</body>
+</html>

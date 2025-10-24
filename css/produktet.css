@@ -1,0 +1,190 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url();
+}
+@font-face {
+  font-family: bold;
+  src: url();
+}
+  *{
+    /* overflow: hidden; */
+    /* border: 1px solid yellow; */
+  }
+  body{
+    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-family: myFirstFont;
+  }
+
+  
+    /* Website Scrollerbar */
+    body::-webkit-scrollbar {
+      width: 5px !important;
+      height: 5px !important;
+  }
+  body::-webkit-scrollbar-track {
+      background: #3838387c !important;
+  }
+  body::-webkit-scrollbar-thumb {
+      background-color: #e0120ba4 !important;
+      border: 1px solid #ff020279 !important;
+      border-radius: 1px !important;
+  }
+
+  
+  .header{
+    min-height: 100vh;
+    width: 100%;
+    
+}
+nav{
+    display: flex;
+    padding: 1% 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 80px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 6px 10px;
+    position: relative;
+    
+}
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ff0000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.icon{
+  display:none;
+}
+
+
+:root{
+--white: #fff;
+--text-clr: #000024;
+--primary: #3e2093;
+--secondary: #000008;
+/* --secondary: #c0c1d2; */
+--input-bg: #f1f1ff;
+--btn-hvr: #1a0065;
+--tra: rgba(255, 255, 255, 0.959);
+/* --tra: rgba(255, 255, 255, 0.863); */
+--bordcolor:rgba(0, 26, 255, 0.082);
+/* --bordcolor:rgba(51, 61, 148, 0.521); */
+}
+/* Seksioni i Produkteve */
+.products {
+    padding: 45px 15px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Mund të ndryshoni këtë ngjyrë për më shumë transparencë */
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+/* Titulli i Produkteve */
+.products-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+/* Rreshti i Produkteve */
+.product-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Stilimi i secilit produkt */
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 25%;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+    width: 40%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: var(--primary);
+}
+
+.product p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Butoni "Blej tani" */
+.btn-buy {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #45a049;
+}
+
+/* Responsiviteti për celularët */
+@media (max-width: 768px) {
+    .product {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%;
+    }
+}
